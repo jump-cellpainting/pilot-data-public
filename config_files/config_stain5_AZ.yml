@@ -1,0 +1,83 @@
+---
+pipeline:
+output_dir: profiles
+platemap_well_column: Metadata_well_position
+compartments: cells,cytoplasm,nuclei
+aggregate:
+  perform: false
+  plate_column: Metadata_Plate
+  well_column: Metadata_Well
+  method: median
+  features: infer
+annotate:
+  perform: true
+  well_column: Metadata_Well
+  external : Stain5_metadata_AZ.tsv
+normalize:
+  perform: true
+  method: mad_robustize
+  features: infer
+  negcon: true
+feature_select:
+  perform: true
+  features: infer
+  negcon: true
+  operations:
+    - variance_threshold
+    - correlation_threshold
+    - drop_na_columns
+    - blocklist
+options:
+  compression: gzip
+  float_format: "%.5g"
+  samples: all
+---
+batch: Stain5_AZ
+plates:
+  - name: 1031173237
+    process: true
+  - name: 1031173244
+    process: true
+  - name: 1031173251
+    process: true
+  - name: 1031173268
+    process: true
+  - name: 1031173275
+    process: true
+  - name: 1031173282
+    process: true
+  - name: 1031173299
+    process: true
+  - name: 1031173305
+    process: true
+  - name: 1031173312
+    process: true
+  - name: 1031173329
+    process: true
+  - name: 1031173336
+    process: true
+  - name: 1031173343
+    process: true
+  - name: 1031173350
+    process: true
+  - name: 1031173367
+    process: true
+  - name: 1031173374
+    process: true
+  - name: 1031173381
+    process: true
+  - name: 1031173404
+    process: true
+  - name: 1031173411
+    process: true
+  - name: 1031173428
+    process: true
+  - name: 1031173435
+    process: true
+  - name: 1031173442
+    process: true
+  - name: 1031173459
+    process: true
+  - name: 1031173466
+    process: true
+process: true

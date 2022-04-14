@@ -1,0 +1,477 @@
+---
+pipeline:
+output_dir: profiles
+platemap_well_column: Metadata_well_position
+compartments: cells,cytoplasm,nuclei
+aggregate:
+  perform: false
+annotate:
+  perform: true
+  well_column: Metadata_Well
+  external :
+normalize:
+  perform: true
+  method: mad_robustize
+  features: infer
+  negcon: true
+feature_select:
+  perform: true
+  features: infer
+  negcon: true
+  operations:
+    - variance_threshold
+    - correlation_threshold
+    - drop_na_columns
+    - blocklist
+options:
+  compression: gzip
+  float_format: "%.5g"
+  samples: all
+---
+batch: 2020_06_25_Stain2_Batch2_Binned
+plates:
+  - name: BR00112197
+    process: true
+process: true
+---
+batch: 2020_06_25_Stain2_Batch2_Confocal
+plates:
+  - name: BR00112200
+    process: true
+process: true
+---
+batch: 2020_06_25_Stain2_Batch2_MitoCompare
+plates:
+  - name: BR00112203
+    process: true
+process: true
+---
+batch: 2020_06_25_Stain2_Batch2_Multiplane
+plates:
+  - name: BR00112199
+    process: true
+process: true
+---
+batch: 2020_06_25_Stain2_Batch2_Redone
+plates:
+  - name: BR00113821
+    process: true
+  - name: BR00113819
+    process: true
+  - name: BR00113818
+    process: true
+  - name: BR00113820
+    process: true
+process: true
+---
+batch: 2020_06_25_Stain2_Batch2_Repeat
+plates:
+  - name: BR00112197
+    process: true
+process: true
+---
+batch: 2020_06_25_Stain2_Batch2_Standard
+plates:
+  - name: BR00112204
+    process: true
+  - name: BR00112202
+    process: true
+  - name: BR00112201
+    process: true
+  - name: BR00112198
+    process: true
+  - name: BR00112197
+    process: true
+process: true
+---
+batch: 2020_08_11_Stain3_Bin1
+plates:
+  - name: BR00115134
+    process: true
+process: true
+---
+batch: 2020_08_11_Stain3_HighExp
+plates:
+  - name: BR00115125
+    process: true
+  - name: BR00115133
+    process: true
+  - name: BR00115132
+    process: true
+  - name: BR00115128
+    process: true
+  - name: BR00115126
+    process: true
+process: true
+---
+batch: 2020_08_11_Stain3_Multiplane
+plates:
+  - name: BR00115134
+    process: true
+process: true
+---
+batch: 2020_08_11_Stain3_Standard
+plates:
+  - name: BR00115130
+    process: true
+  - name: BR00115131
+    process: true
+  - name: BR00115125
+    process: true
+  - name: BR00115134
+    process: true
+  - name: BR00115133
+    process: true
+  - name: BR00115132
+    process: true
+  - name: BR00115128
+    process: true
+  - name: BR00115126
+    process: true
+  - name: BR00115127
+    process: true
+  - name: BR00115129
+    process: true
+process: true
+---
+batch: 2020_08_11_Stain3_Yokogawa
+plates:
+  - name: BR00115130
+    process: true
+  - name: BR00115131
+    process: true
+  - name: BR00115125
+    process: true
+  - name: BR00115134
+    process: true
+  - name: BR00115133
+    process: true
+  - name: BR00115132
+    process: true
+  - name: BR00115128
+    process: true
+  - name: BR00115126
+    process: true
+  - name: BR00115127
+    process: true
+  - name: BR00115129
+    process: true
+process: true
+---
+batch: 2020_09_22_Stain4_Bin1
+plates:
+  - name: 200922_044247-V
+    process: true
+  - name: BR00116634
+    process: true
+  - name: BR00116633
+    process: true
+process: true
+---
+batch: 2020_09_22_Stain4_Bray
+plates:
+  - name: BR00116620
+    process: true
+  - name: BR00116621
+    process: true
+  - name: BR00116624
+    process: true
+process: true
+---
+batch: 2020_09_22_Stain4_Bray_HighExp
+plates:
+  - name: BR00116632
+    process: true
+  - name: BR00116634
+    process: true
+  - name: BR00116633
+    process: true
+  - name: BR00116620
+    process: true
+  - name: BR00116621
+    process: true
+  - name: 200921_193743-V
+    process: true
+  - name: 200922_015124-V
+    process: true
+  - name: BR00116624
+    process: true
+  - name: BR00116622
+    process: true
+process: true
+---
+batch: 2020_09_22_Stain4_HighExp
+plates:
+  - name: BR00116629
+    process: true
+  - name: BR00116627
+    process: true
+  - name: BR00116628
+    process: true
+  - name: BR00116631
+    process: true
+  - name: BR00116630
+    process: true
+  - name: BR00116625
+    process: true
+process: true
+---
+batch: 2020_09_22_Stain4_Standard
+plates:
+  - name: BR00116629
+    process: true
+  - name: BR00116627
+    process: true
+  - name: BR00116628
+    process: true
+  - name: BR00116631
+    process: true
+  - name: BR00116630
+    process: true
+  - name: 200921_193743-V
+    process: true
+  - name: 200922_015124-V
+    process: true
+  - name: BR00116622
+    process: true
+  - name: BR00116625
+    process: true
+process: true
+---
+batch: 2020_10_02_RestainedCell1
+plates:
+  - name: BR00117110
+    process: true
+  - name: BR00117098
+    process: true
+  - name: BR00117091
+    process: true
+  - name: BR00117097
+    process: true
+  - name: BR00117099
+    process: true
+  - name: BR00117104
+    process: true
+  - name: BR00117105
+    process: true
+  - name: BR00117092
+    process: true
+  - name: BR00117094
+    process: true
+  - name: BR00117093
+    process: true
+  - name: BR00117089
+    process: true
+  - name: BR00117088
+    process: true
+  - name: BR00117107
+    process: true
+  - name: BR00117100
+    process: true
+  - name: BR00117109
+    process: true
+  - name: BR00117108
+    process: true
+  - name: BR00117101
+    process: true
+  - name: BR00117106
+    process: true
+process: true
+---
+batch: 2020_10_07_Plate1
+plates:
+  - name: BR00117144
+    process: true
+  - name: BR00117143
+    process: true
+  - name: BR00117031
+    process: true
+  - name: BR00117030
+    process: true
+  - name: BR00117150
+    process: true
+  - name: BR00117032
+    process: true
+process: true
+---
+batch: 2020_10_20_Cell1_restainedReimaged
+plates:
+  - name: BR00117096
+    process: true
+  - name: BR00117095
+    process: true
+process: true
+---
+batch: 2020_10_20_Cell1_restainedReimaged_Bin1Pipeline
+plates:
+  - name: BR00117096
+    process: true
+  - name: BR00117095
+    process: true
+process: true
+---
+batch: 2020_10_20_Plate1_PE_Bin1
+plates:
+  - name: BR00117031
+    process: true
+  - name: BR00117030
+    process: true
+  - name: BR00117032
+    process: true
+process: true
+---
+batch: 2020_12_11_Reagent1_Pfizer
+plates:
+  - name: CPJUMP002
+    process: true
+  - name: CPJUMP005
+    process: true
+  - name: CPJUMP004
+    process: true
+  - name: CPJUMP003
+    process: true
+  - name: CPJUMP006
+    process: true
+  - name: CPJUMP001
+    process: true
+  - name: CPJUMP008
+    process: true
+  - name: CPJUMP007
+    process: true
+process: true
+---
+batch: Stain5_CondAB_Confocal
+plates:
+  - name: BR00120537
+    process: true
+  - name: BR00120530
+    process: true
+  - name: BR00120531
+    process: true
+  - name: BR00120536
+    process: true
+  - name: BR00120538
+    process: true
+  - name: BR00120279
+    process: true
+  - name: BR00120278
+    process: true
+  - name: BR00120547
+    process: true
+  - name: BR00120525
+    process: true
+  - name: BR00120523
+    process: true
+  - name: BR00120524
+    process: true
+  - name: BR00120533
+    process: true
+  - name: BR00120534
+    process: true
+  - name: BR00120535
+    process: true
+  - name: BR00120532
+    process: true
+  - name: BR00120280
+    process: true
+  - name: BR00120526
+    process: true
+  - name: BR00120528
+    process: true
+  - name: BR00120529
+    process: true
+  - name: BR00120527
+    process: true
+process: true
+---
+batch: Stain5_CondAB_Standard
+plates:
+  - name: BR00120537
+    process: true
+  - name: BR00120530
+    process: true
+  - name: BR00120531
+    process: true
+  - name: BR00120536
+    process: true
+  - name: BR00120538
+    process: true
+  - name: BR00120279
+    process: true
+  - name: BR00120278
+    process: true
+  - name: BR00120547
+    process: true
+  - name: BR00120525
+    process: true
+  - name: BR00120523
+    process: true
+  - name: BR00120524
+    process: true
+  - name: BR00120533
+    process: true
+  - name: BR00120534
+    process: true
+  - name: BR00120535
+    process: true
+  - name: BR00120532
+    process: true
+  - name: BR00120280
+    process: true
+  - name: BR00120526
+    process: true
+  - name: BR00120528
+    process: true
+  - name: BR00120529
+    process: true
+  - name: BR00120527
+    process: true
+process: true
+---
+batch: Stain5_CondC_Confocal
+plates:
+  - name: BR00120270
+    process: true
+  - name: BR00120277
+    process: true
+  - name: BR00120276
+    process: true
+  - name: BR00120271
+    process: true
+  - name: BR00120274
+    process: true
+  - name: BR00120273
+    process: true
+  - name: BR00120272
+    process: true
+  - name: BR00120275
+    process: true
+  - name: BR00120269
+    process: true
+  - name: BR00120267
+    process: true
+process: true
+---
+batch: Stain5_CondC_Standard
+plates:
+  - name: BR00120270
+    process: true
+  - name: BR00120277
+    process: true
+  - name: BR00120276
+    process: true
+  - name: BR00120271
+    process: true
+  - name: BR00120274
+    process: true
+  - name: BR00120273
+    process: true
+  - name: BR00120272
+    process: true
+  - name: BR00120275
+    process: true
+  - name: BR00120269
+    process: true
+  - name: BR00120267
+    process: true
+process: true
